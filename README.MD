@@ -19,3 +19,8 @@ this will output:
 value has changed:1->2
 value has changed:2->1
 ```
+
+## TODO
+- trace the property of a object
+- trace the different rate of list
+- ...
