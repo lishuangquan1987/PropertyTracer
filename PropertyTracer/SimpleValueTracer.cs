@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace PropertyTracer
 {
-    public class SimplePropertyTracer<T> : IPropertyTracer<T> where T : IComparable
+    public class SimpleValueTracer<T> : IPropertyTracer<T> where T : IComparable
     {
         private List<T> list = new List<T>();
         private int maxCapacity;
         private BaseTriggerPolicy<T> policy;
-        public SimplePropertyTracer(BaseTriggerPolicy<T> policy = null, int maxCapacity = 100)
+        public SimpleValueTracer(BaseTriggerPolicy<T> policy = null, int maxCapacity = 100)
         {
             this.maxCapacity = maxCapacity;
             this.policy = policy ?? new EqualityTriggerPolicy<T>();
